@@ -1,8 +1,4 @@
-provider "aws" {
-  access_key = "AKIAVSRNOMAYZ4DG5UXI"
-  secret_key = "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"
-  region = "us-west-2"
-}
+
 data "template_file" "web-shell-script" {
   template = "${file("scripts/user-data-web.sh")}"
   vars {
