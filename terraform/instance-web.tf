@@ -25,7 +25,7 @@ resource "aws_security_group" "web-instance" {
     protocol = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-  tags {
+  tags = {
     Name = "web-instance"
   }
 }

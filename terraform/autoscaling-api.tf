@@ -35,7 +35,7 @@ resource "aws_autoscaling_group" "api-autoscaling" {
     create_before_destroy = true
   }
 
-  tag = {
+  tags = {
     key = "Name"
     value = "api ec2 instance"
     propagate_at_launch = true
