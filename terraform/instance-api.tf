@@ -1,6 +1,7 @@
 provider "aws" {
-  region = "eu-west-1"
-  shared_credentials_file = "/Users/gkohli/.aws/credentials"
+  access_key = "AKIAVSRNOMAYZ4DG5UXI"
+  secret_key = "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"
+  region = "us-west-2"
 }
 
 data "template_file" "api-shell-script" {
@@ -30,6 +31,6 @@ resource "aws_security_group" "api-instance" {
     cidr_blocks = ["0.0.0.0/0"]
   }
   tags {
-    Name = "example-instance"
+    Name = "Api-instance"
   }
 }
