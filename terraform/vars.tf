@@ -2,7 +2,7 @@ variable "RDS_PASSWORD" {
   default = "123321"
 }
 variable "TERRAFORM_VERSION" {
-  default = "0.12.31"
+  default = "1.1.1"
 }
 variable "API_PORT" {
   default = "5432"
