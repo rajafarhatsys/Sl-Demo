@@ -22,12 +22,13 @@ variable "PATH_TO_PUBLIC_KEY" {
 }
 
 
-variable "AMIS" {
+/*variable "AMIS" {
   type = map
   default = {
     us-west-2="ami-0892d3c7ee96c0bf7"
   }
 }
+*/
 
 variable "INSTANCE_USERNAME" {
   default = "ubuntu"
