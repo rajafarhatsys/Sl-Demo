@@ -36,7 +36,7 @@ resource "aws_autoscaling_group" "web-autoscaling" {
     create_before_destroy = true
   }
 
-  tag {
+  tag = {
     key = "Name"
     value = "web ec2 instance"
     propagate_at_launch = true
