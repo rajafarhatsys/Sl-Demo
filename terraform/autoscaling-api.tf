@@ -34,11 +34,12 @@ resource "aws_autoscaling_group" "api-autoscaling" {
   lifecycle {
     create_before_destroy = true
   }
-
-  map = {
+default_tags { 
+  tags = {
     key = "Name"
     value = "web ec2 instance"
     propagate_at_launch = true
   }
+}
 }
 
