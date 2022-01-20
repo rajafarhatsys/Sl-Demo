@@ -36,9 +36,9 @@ resource "aws_autoscaling_group" "api-autoscaling" {
   }
 
   tags = {
-    key = "Name"
-    value = "api ec2 instance"
-    propagate_at_launch = true
+    "key" = "Name"
+    "value" = "api ec2 instance"
+    "propagate_at_launch" = true
   }
 }
 
