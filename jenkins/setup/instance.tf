@@ -1,11 +1,13 @@
 provider "aws" {
-  region = "eu-west-1"
-  shared_credentials_file = "/Users/gkohli/.aws/credentials"
+  access_key = "AKIAVSRNOMAYZ4DG5UXI"
+  secret_key = "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"
+  region = "us-west-2"
 }
 
 
+
 resource "aws_instance" "jenkins-instance" {
-  ami           = "${lookup(var.AMIS, var.AWS_REGION)}"
+  ami = "ami-0892d3c7ee96c0bf7"
   instance_type = "t2.micro"
 
   # the VPC subnet
@@ -25,10 +27,10 @@ resource "aws_instance" "jenkins-instance" {
 }
 
 resource "aws_ebs_volume" "jenkins-data" {
-  availability_zone = "eu-west-1a"
+  availability_zone = "us-west-2a"
   size = 20
   type = "gp2"
-  tags {
+  tags ={
     Name = "jenkins-data"
   }
 }
