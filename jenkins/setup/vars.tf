@@ -7,12 +7,13 @@ variable "PATH_TO_PRIVATE_KEY" {
 variable "PATH_TO_PUBLIC_KEY" {
   default = "mykey.pub"
 }
-variable "AMIS" {
+/*variable "AMIS" {
   type = map
   default = {
     us-west-2="ami-0892d3c7ee96c0bf7"
   }
 }
+*/
 variable "INSTANCE_DEVICE_NAME" {
   default = "/dev/xvdh"
 }
