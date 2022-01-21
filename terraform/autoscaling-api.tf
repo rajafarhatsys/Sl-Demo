@@ -18,8 +18,13 @@ resource "aws_launch_configuration" "api-launchconfig" {
   }
 
 }
-
+variable "additional_tags" {
+  default     = {}
+  description = "Additional resource tags"
+  type        = map(string)
+}
 resource "aws_autoscaling_group" "api-autoscaling" {
+  
   name = "${aws_launch_configuration.api-launchconfig.name}-asg"
 
   vpc_zone_identifier  = ["${aws_subnet.main-public-1.id}"]
@@ -34,12 +39,12 @@ resource "aws_autoscaling_group" "api-autoscaling" {
   lifecycle {
     create_before_destroy = true
   }
-default_tags { 
-  tags = {
-    key = "Name"
-    value = "web ec2 instance"
-    propagate_at_launch = true
-  }
+  //tags = {
+    //key = "Name"
+    //value = "web ec2 instance"
+    //propagate_at_launch = "true"
+ // }
+  
 }
-}
+
 
