@@ -1,4 +1,4 @@
-ata "aws_ami" "amazon-linux-2" {
+data "aws_ami" "amazon-linux-2" {
   most_recent = true
   owners = ["amazon"]
   filter {
@@ -14,7 +14,6 @@ ata "aws_ami" "amazon-linux-2" {
     ]
   }
 }
-
 resource "aws_instance" "jenkins-instance" {
   ami             = "${data.aws_ami.amazon-linux-2.id}"
   instance_type   = "t2.medium"
@@ -28,7 +27,7 @@ resource "aws_instance" "jenkins-instance" {
   associate_public_ip_address = true
   tags = {
     Name = "Jenkins-Instance"
-  }
+  } 
 }
 
 resource "aws_security_group" "sg_allow_ssh_jenkins" {

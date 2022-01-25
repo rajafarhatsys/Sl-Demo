@@ -1,10 +1,8 @@
-
 provider "aws" {
   region = "${var.region}"
-  access_key = "AKIAVSRNOMAYZ4DG5UXI"
-  secret_key = "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"
+  access_key = "AKIAVSRNOMAYXTUNZ6B3"
+  secret_key = "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"
 
   # shared_credentials_file = "~/.aws/credentials"
   # profile                 = "development"
 }
-
